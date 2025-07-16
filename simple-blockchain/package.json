@@ -1,0 +1,11 @@
+{
+  "name": "simple-blockchain",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
