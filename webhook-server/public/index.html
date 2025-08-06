@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Webhook Dashboard</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    function App() {
+      const [events, setEvents] = React.useState([]);
+      React.useEffect(() => {
+        fetch('/events')
+          .then(res => res.json())
+          .then(setEvents);
+      }, []);
+      return (
+        <div>
+          <h1>Stored Webhook Events</h1>
+          <ul>
+            {events.map((e, i) => (
+              <li key={i}>
+                <pre>{JSON.stringify(e, null, 2)}</pre>
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
