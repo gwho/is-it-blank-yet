@@ -4,3 +4,5 @@
 *.pid
 *.tmproj
 .DS_Store
+node_modules/
+content-platform/cache/

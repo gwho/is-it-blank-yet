@@ -1,0 +1,19 @@
+{
+  "name": "threejs-solar-starter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.161.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.161.1",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  }
+}
