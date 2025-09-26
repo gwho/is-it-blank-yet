@@ -1,0 +1,12 @@
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+canvas {
+  display: block;
+}
